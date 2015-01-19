@@ -305,7 +305,7 @@ class FastImage
   end
 
   def fetch_using_open_uri
-    open(@uri) do |s|
+    open(@uri, 'User-Agent' => 'opera') do |s|
       fetch_using_read(s)
     end
   end
